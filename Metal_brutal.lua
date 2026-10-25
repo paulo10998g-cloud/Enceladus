@@ -21,9 +21,11 @@ while true do
     end
 
   local alturaAtual = altura
-
-if Pads.check(pad, PAD_DOWN) then
+  local yAtual = y
+  
+    if Pads.check(pad, PAD_DOWN) then
     alturaAtual = 18
+    yAtual = y + 18
   end
   
     -- Limites da tela
@@ -53,7 +55,7 @@ if Pads.check(pad, PAD_DOWN) then
 
     -- Soldado provisório
     Graphics.drawRect(
-        x, y, 20,  alturaAtual,
+        x, yAtual, 20,  alturaAtual,
         Color.new(30, 70, 180)
     )
 
