@@ -30,7 +30,9 @@ while true do
 
     Screen.clear()
 
-    -- Ceu
+  Font.fmPrint(20, 20, 0.7, "METAL BRUTAL", Color.new(255, 255, 255))
+   
+  -- Ceu
     Graphics.drawRect(
         0, 0, 640, 448,
         Color.new(70, 130, 190)
