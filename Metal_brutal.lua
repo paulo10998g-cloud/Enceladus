@@ -7,6 +7,7 @@
 local x = 100
 local y = 300
 local velocidade = 3
+local altura = 36
 
 while true do
     local pad = Pads.get()
@@ -19,6 +20,12 @@ while true do
         x = x + velocidade
     end
 
+  local alturaAtual = altura
+
+if Pads.check(pad, PAD_DOWN) then
+    alturaAtual = 18
+  end
+  
     -- Limites da tela
     if x < 0 then
         x = 0
@@ -46,7 +53,7 @@ while true do
 
     -- Soldado provisório
     Graphics.drawRect(
-        x, y, 20, 36,
+        x, y, 20,  alturaAtual,
         Color.new(30, 70, 180)
     )
 
